@@ -1,0 +1,35 @@
+.footer {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.brand-partners {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logos-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-height: 50px;
+    flex: 0 0 auto;
+    margin: 2px;
+}
+
+.logos-container::-webkit-scrollbar {
+    display: none;
+}
+
+.logos-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

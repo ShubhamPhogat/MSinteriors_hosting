@@ -1,0 +1,61 @@
+/* Container for the entire page */
+.admin-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .admin-inner-container {
+    padding: 30px 20px;
+  }
+
+  .admin-title {
+    font-size: 28px;
+  }
+
+  .admin-welcome {
+    font-size: 16px;
+  }
+}
+/* UploadCard.css */
+.admin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.upload-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-card .ant-card-head-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.upload-card .mt-2 {
+  margin-top: 10px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+}

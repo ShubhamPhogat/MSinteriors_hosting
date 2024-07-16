@@ -1,0 +1,30 @@
+.contactform
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.formWrapper
+{
+    background-color: aqua;
+    width: 30%;
+    height: 50vh;
+
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form div{
+    margin-top: 0%;
+    width: 80%;
+    height: 30px;
+    
+}
+form div input{
+    border: none;
+}

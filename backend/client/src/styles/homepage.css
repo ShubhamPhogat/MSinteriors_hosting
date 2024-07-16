@@ -1,0 +1,122 @@
+.main{
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow from background */
+    background: url('../assesets/img/bg1.jpg') center center/cover no-repeat; /* Set the background image */
+    /* z-index: -100; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    /* overflow-y: hidden; */
+  }
+  
+  /* Dark overlay at the bottom */
+  .main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust the height of the overlay */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    filter: blur(10px); /* Blur effect */
+  }
+  .form
+  {
+    width: 50%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    flex-direction: column;
+    margin-top: 20rem;
+    padding: 2rem;
+    z-index: 1;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    
+  }
+  .btn
+  {
+    border-radius: 9px;
+    background-color: rgb(227, 191, 147);
+    color: black;
+    /* padding: 5%; */
+    font-size: 1.08rem;
+    border: none;
+    cursor: pointer;
+  }
+  @media(max-width:400px){
+    .main{
+      position: relative;
+      width: 100vw;
+      height: 110vh; /* Full viewport height */
+      overflow: hidden; /* Hide overflow from background */
+      background: url('../assesets/img/bg1.jpg') center center/cover no-repeat; /* Set the background image */
+      /* z-index: -100; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .form {
+      width: 90%;
+      padding: 15px;
+      margin: 10px 0;
+      /* top: 60%; */
+      position: relative;
+    top: 20%;
+    }
+    .main{
+      top: 20%;
+      
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    h3 {
+      font-size: 14px;
+    }
+  
+    .btn {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+  /* @media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .content {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+} */

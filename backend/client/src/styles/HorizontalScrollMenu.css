@@ -1,0 +1,100 @@
+/* Main container for the scroll menu */
+.scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Styling for the scroll menu to allow horizontal scrolling but hide scrollbar */
+.scroll-menu {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: calc(100% - 60px); /* Adjust width considering the buttons */
+    margin: 0 10px;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+}
+
+.scroll-menu::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+/* Styling for each scroll item */
+.scroll-item {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the scroll items */
+.scroll-item:hover {
+    background-color: #ff6161;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Styling for the scroll buttons */
+.scroll-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the scroll buttons */
+.scroll-button:hover {
+    background-color: #ddd;
+}
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .scroll-container {
+      padding: 5px;
+    }
+  
+    .scroll-button {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    .scroll-item {
+      padding: 8px 10px;
+      margin: 0 3px;
+      font-size: 14px;
+    }
+  }
+/* Medium devices */
+@media (min-width: 480px) and (max-width: 767px) {
+    .scroll-container {
+      padding: 10px;
+    }
+  
+    .scroll-button {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  
+    .scroll-item {
+      padding: 10px 15px;
+      margin: 0 5px;
+      font-size: 16px;
+    }
+  }
+    

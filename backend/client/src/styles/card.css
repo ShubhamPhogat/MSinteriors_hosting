@@ -1,0 +1,114 @@
+.cardBody {
+    width: 15rem;
+    height: 20rem; /* Adjusted height to accommodate the title */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensures proper spacing */
+    margin: 1rem;
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.cardBody:hover {
+    width: 12rem;
+    height: 17rem; /* Adjusted height to match the hover effect */
+}
+
+.Cardimg {
+    width: 100%;
+    height: 80%; /* Adjusted to take most of the card height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cardimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    border-radius: 10px 10px 0 0; /* Rounded corners on the top */
+}
+
+.title {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #fff; /* Background color for the title */
+    border-radius: 0 0 10px 10px; /* Rounded corners on the bottom */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.title h3 {
+    margin: 0;
+    font-size: 1rem; /* Adjusted font size */
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .cardBody {
+        width: 18rem;
+        height: 23rem;
+    }
+
+    .cardBody:hover {
+        width: 16rem;
+        height: 20rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .cardBody {
+        width: 16rem;
+        height: 21rem;
+    }
+
+    .cardBody:hover {
+        width: 12rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardBody {
+        width: 14rem;
+        height: 19rem;
+    }
+
+    .cardBody:hover {
+        width: 10rem;
+        height: 15rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .cardBody {
+        width: 12rem;
+        height: 17rem;
+    }
+
+    .cardBody:hover {
+        width: 9rem;
+        height: 12rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .cardBody {
+        width: 10rem;
+        height: 15rem;
+    }
+
+    .cardBody:hover {
+        width: 7rem;
+        height: 11rem;
+    }
+}

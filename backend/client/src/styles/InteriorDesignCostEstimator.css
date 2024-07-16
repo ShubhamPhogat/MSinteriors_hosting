@@ -1,0 +1,116 @@
+.Estcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.image-left, .image-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-left img, .image-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-container {
+    flex: 2;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.interior-design-estimator h2 {
+    text-align: center;
+}
+
+.property-type, .purpose {
+    margin: 20px 0;
+}
+.option{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.property-options, .purpose-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.property-options button, .purpose-options button, .next-button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.selectedbtn {
+    background-color: #4caf50 !important; /* Green color for selected state */
+    border-color: #f9f9f9;
+}
+.option span{
+ /* background-color: #f9f9f9; */
+
+ display: flex;
+ align-items: center;
+font-size: xx-large;
+ justify-content: center;
+ 
+}
+
+@media (max-width: 768px) {
+    .Estcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-left, .image-right {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Estcontainer {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .image-left, .image-right {
+        display: flex;
+    }
+
+    .form-container {
+        max-width: 50%;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,80 @@
+.advice-container {
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: rgb(230, 225, 219);
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .advice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2rem 12rem;
+  }
+  
+  .advice-card {
+    background: linear-gradient(to right, #e0eafc 0%, #cfdef3 100%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s;
+    position: relative;
+  }
+  
+  .advice-card img {
+    max-width: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .advice-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .advice-card p {
+    color: #555;
+  }
+  
+  .advice-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .advice-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .advice-card:hover::before {
+    opacity: 1;
+  }
+  
+
+  .hordings{
+    margin-top: 7rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .advice-grid {
+      grid-template-columns: 1fr;
+      padding: 0 2rem;
+    }
+  }
+  

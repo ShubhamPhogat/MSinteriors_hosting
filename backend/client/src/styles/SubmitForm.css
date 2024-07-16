@@ -1,0 +1,85 @@
+.Submitform-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  flex-direction: column;
+}
+
+.Submith2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.vanish{
+  display: none;
+}
+.Submitcontact-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.Submitform-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+
+.Submitinput,
+.Submittextarea {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.Submittextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.Submitbutton {
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  margin-top: 20%;
+}
+
+.Submitbutton:hover {
+  background: linear-gradient(to right, #00b3b3, #b000ff);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .Submitform-group {
+    flex-direction: column;
+  }
+
+  .Submitform-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Submitcontact-form  {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .Submitbutton {
+    width: 100%;
+    font-size: 14px;
+  }
+}

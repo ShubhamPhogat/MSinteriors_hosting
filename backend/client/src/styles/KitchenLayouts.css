@@ -1,0 +1,37 @@
+.kitchen-layouts {
+    text-align: center;
+  }
+  
+  .kitchen-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .kitchen-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .kitchen-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .kitchen-card h3 {
+    font-size: 1.5em;
+  }
+  
+  .kitchen-card p {
+    font-size: 1em;
+  }
+  
+  .kitchen-card a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  

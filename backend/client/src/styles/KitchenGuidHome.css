@@ -1,0 +1,42 @@
+.kitchen-guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../assesets/img/kitchenBg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.content-wrapper {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.guide-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffe0b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.guide-button:hover {
+    background-color: #ffcc80;
+}

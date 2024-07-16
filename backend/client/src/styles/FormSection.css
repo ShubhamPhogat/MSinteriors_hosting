@@ -1,0 +1,14 @@
+.meetingForm{
+  display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: antiquewhite;
+}
+.SubmitFormBtn{
+border: none;
+background-color: orange;
+width: 80px;
+height: 40px;
+border-radius: 5%;
+}
