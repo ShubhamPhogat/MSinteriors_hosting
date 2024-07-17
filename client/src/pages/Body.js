@@ -39,7 +39,7 @@ const Body = ({ selectedScroll }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/images")
+      .get("https://msinteriors-backend.onrender.com/api/images")
       .then((response) => {
         setData(response.data);
 

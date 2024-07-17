@@ -13,7 +13,7 @@ const ImageCard = ({ type }) => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:5000/api/images")
+      .get("https://msinteriors-backend.onrender.com/api/images")
       .then((response) => {
         setData(response.data);
         setIsLoading(false);
