@@ -56,3 +56,4 @@ export { default as LshapeKitchen } from "./img/LShape.png";
 export { default as Island } from "./img/Island.png";
 export { default as PeninsulaIsland } from "./img/PeninsulaIsland.png";
 export { default as Chair } from "./img/Chair.png";
+export { default as homeBg } from "./img/homeBG.avif";

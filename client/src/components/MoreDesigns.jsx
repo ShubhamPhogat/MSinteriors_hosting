@@ -95,12 +95,14 @@ const MoreDesigns = ({ array }) => {
             </select>
           </div>
 
-          <button className="submitBtn" type="submit">
-            Apply
-          </button>
-          <button onClick={clear} className="submitBtn" type="submit">
-            clear All
-          </button>
+          <div className="filter">
+            <button className="submitBtn" type="submit">
+              Apply
+            </button>
+            <button onClick={clear} className="submitBtn" type="submit">
+              clear All
+            </button>
+          </div>
         </div>
       </form>
 

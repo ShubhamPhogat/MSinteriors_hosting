@@ -15,13 +15,13 @@
     max-width: 600px;
 }
 
-h1 {
+.kitchenh1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-p {
+.kitchenp {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 20px;

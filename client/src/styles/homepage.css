@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100vh; /* Full viewport height */
     overflow: hidden; /* Hide overflow from background */
-    background: url('../assesets/img/bg1.jpg') center center/cover no-repeat; /* Set the background image */
+    background: url('../assesets/img/homeBG.avif') center center/cover no-repeat; /* Set the background image */
     /* z-index: -100; */
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
   .form
   {
     width: 50%;
-    height: 200px;
+    /* height: 200px; */
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* For Safari */
@@ -64,12 +64,15 @@
       width: 100vw;
       height: 110vh; /* Full viewport height */
       overflow: hidden; /* Hide overflow from background */
-      background: url('../assesets/img/bg1.jpg') center center/cover no-repeat; /* Set the background image */
+      background: url('../assesets/img/homeBG.avif') center center/cover no-repeat; /* Set the background image */
       /* z-index: -100; */
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 100;
+    }
+    h1{
+      font-size: 20px;
     }
   }
   

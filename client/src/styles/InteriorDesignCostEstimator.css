@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    width: 100vw;
+    /* padding: 20px; */
+    width: 90vw;
     height: 100vh;
+    text-align: center;
 }
 
 

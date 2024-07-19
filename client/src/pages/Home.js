@@ -19,11 +19,12 @@ const Home = ({ selectedScroll }) => {
     <div>
       <div className="main">
         <div className="form ">
-          <h1>interior desing that speaks of you</h1>
-          <h3>
-            from foundation to furnishing we desing your home like our own
-            Providing Services from 2002
+          <h1 className="h1">Interior desing that speaks of you</h1>
+          <h3 className="h3">
+            Rrom foundation to furnishing we desing your home like our own
           </h3>
+          <h3>Providing Services from 2002</h3>
+
           <button onClick={hide} className="btn">
             Book free consultation
           </button>

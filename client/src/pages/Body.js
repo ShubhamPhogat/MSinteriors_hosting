@@ -81,8 +81,11 @@ const Body = ({ selectedScroll }) => {
         <img src={ss1} />
       </div>
       <div className="features">
-        <h1>Interior Design Services Under One Roof</h1>
-        <h3>
+        <h1 className="h1" style={{ color: "red" }}>
+          Interior Design{" "}
+        </h1>
+        <h1 className="h1"> Services Under One Roof</h1>
+        <h3 className="h3">
           From ideation to execution, we offer functional design solutions for
           your home.
         </h3>
@@ -117,8 +120,10 @@ const Body = ({ selectedScroll }) => {
         </div>
       </div>
       <div className="scrollBar">
-        <h1>Design Ideas for Every Space</h1>
-        <h3>Because every corner holds a unique design potential.</h3>
+        <h1 className="h1">Design Ideas for Every Space</h1>
+        <h3 className="h3">
+          Because every corner holds a unique design potential.
+        </h3>
         <HorizontalScrollMenu
           func={setDesign}
           selectedScroll={selectedScroll}

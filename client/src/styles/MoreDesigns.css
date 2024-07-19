@@ -26,7 +26,7 @@ select {
 .DesingContainer {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   width: 100vw;
   height: 100%;
@@ -75,7 +75,7 @@ select {
 }
 
 .submitBtn {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   font-size: 1rem;
   border-radius: 8%;
   border: none;
@@ -213,7 +213,7 @@ select {
 }
 
 /* Styles for the submit button */
-.submitBtn {
+/* .submitBtn {
   margin-top: 3rem;
   font-size: 1rem;
   border-radius: 8%;
@@ -221,7 +221,7 @@ select {
   width: 5rem;
   height: 2.5rem;
   background-color: orange;
-}
+} */
 
 /* Adjustments for smaller screens */
 @media (max-width: 600px) {
