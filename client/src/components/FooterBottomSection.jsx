@@ -53,7 +53,6 @@ const FooterBottomSection = () => {
           <div className="column">
             <h4>Contact Us</h4>
             <ul>
-              <li>Call us on, toll free no. 1800 208 3344</li>
               <li>Write to us at MSinteriorArts.com</li>
             </ul>
           </div>
@@ -88,7 +87,7 @@ const FooterBottomSection = () => {
               <a href="#">
                 <FaFacebookSquare />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/ms_interior_designers?utm_source=qr&igsh=MTF2dnNhNmN3ajd4aw==">
                 <FaInstagram />
               </a>
             </div>

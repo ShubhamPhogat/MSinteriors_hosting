@@ -30,7 +30,7 @@ const Footer = () => {
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
     let scrollAmount = 0;
-    const scrollStep = 2;
+    const scrollStep = 4;
     const scrollInterval = setInterval(() => {
       scrollAmount += scrollStep;
       scrollContainer.scrollLeft += scrollStep;

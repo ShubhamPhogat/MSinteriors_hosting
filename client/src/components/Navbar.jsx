@@ -17,59 +17,59 @@ const Navbar = ({ setScroll }) => {
     setIsOpen(!isOpen);
   };
 
-  const displayDropdown = () => {
-    const ele = document.getElementById("desdrop");
-    ele.classList.toggle("show");
-    ele.classList.toggle("hide");
-  };
+  // const displayDropdown = () => {
+  //   const ele = document.getElementById("desdrop");
+  //   ele.classList.toggle("show");
+  //   ele.classList.toggle("hide");
+  // };
 
   const handleNavItemClick = (path) => {
     navigate(path);
   };
-  function skipToMain(data) {
-    // Store data in localStorage
-    localStorage.setItem("selectedItem", JSON.stringify(data));
+  // function skipToMain(data) {
+  //   // Store data in localStorage
+  //   localStorage.setItem("selectedItem", JSON.stringify(data));
 
-    // Function to set the scroll and attach data to the element
-    const setScroll = (data) => {
-      const ele = document.getElementById("scrollBar");
+  //   // Function to set the scroll and attach data to the element
+  //   const setScroll = (data) => {
+  //     const ele = document.getElementById("scrollBar");
 
-      if (ele) {
-        // Attach data to the element
-        ele.setAttribute("data-scroll-data", JSON.stringify(data));
+  //     if (ele) {
+  //       // Attach data to the element
+  //       ele.setAttribute("data-scroll-data", JSON.stringify(data));
 
-        // Scroll to the element smoothly
-        ele.scrollIntoView({ behavior: "smooth" });
-        console.log("Scrolled to ele:", ele);
-      } else {
-        console.log("Element not found, navigating to root");
-        navigate("/");
-      }
-    };
+  //       // Scroll to the element smoothly
+  //       ele.scrollIntoView({ behavior: "smooth" });
+  //       console.log("Scrolled to ele:", ele);
+  //     } else {
+  //       console.log("Element not found, navigating to root");
+  //       navigate("/");
+  //     }
+  //   };
 
-    // Attempt to set scroll with a delay to ensure the element is loaded
-    const attempts = 10; // Number of attempts
-    const delay = 100; // Delay between attempts in milliseconds
+  // Attempt to set scroll with a delay to ensure the element is loaded
+  const attempts = 10; // Number of attempts
+  const delay = 100; // Delay between attempts in milliseconds
 
-    let currentAttempt = 0;
+  let currentAttempt = 0;
 
-    const intervalId = setInterval(() => {
-      const ele = document.getElementById("scrollBar");
+  // const intervalId = setInterval(() => {
+  //   const ele = document.getElementById("scrollBar");
 
-      if (ele) {
-        clearInterval(intervalId);
-        setScroll(data);
-      } else if (currentAttempt >= attempts) {
-        clearInterval(intervalId);
-        console.log(
-          "Element not found after multiple attempts, navigating to root"
-        );
-        navigate("/");
-      }
+  // if (ele) {
+  //   clearInterval(intervalId);
+  //   setScroll(data);
+  // } else if (currentAttempt >= attempts) {
+  //   clearInterval(intervalId);
+  //   console.log(
+  //     "Element not found after multiple attempts, navigating to root"
+  //   );
+  //   navigate("/");
+  // }
 
-      currentAttempt++;
-    }, delay);
-  }
+  //     currentAttempt++;
+  //   }, delay);
+  // }
 
   return (
     <div>
@@ -81,7 +81,7 @@ const Navbar = ({ setScroll }) => {
           <ul>
             {!isAdmin && (
               <>
-                <li
+                {/* <li
                   onClick={displayDropdown}
                   className="options hide-mob desIdea"
                 >
@@ -141,7 +141,7 @@ const Navbar = ({ setScroll }) => {
                       </li>
                     </ul>
                   </div>
-                </li>
+                </li> */}
                 <li
                   onClick={() => handleNavItemClick("./EstimateCost/*")}
                   className="options hide-mob"

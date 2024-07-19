@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 const ImageCard = ({ src, text, id, items, arrInd }) => {
   const navigate = useNavigate();
+  const getFirst20Words = (text) => {
+    return text.split(" ").slice(0, 12).join(" ") + "...";
+  };
   function renderForm() {
     const url = `/imgView/${id}`;
     // console.log(id, "id");
@@ -14,7 +17,7 @@ const ImageCard = ({ src, text, id, items, arrInd }) => {
     <div onClick={() => renderForm()} className="image-card">
       <img src={src} alt={text} id={id} className="image-card-img" />
       <div className="image-card-overlay">
-        <div className="image-card-text">{text}</div>
+        <div className="image-card-text">{getFirst20Words(text)}</div>
       </div>
     </div>
   );
