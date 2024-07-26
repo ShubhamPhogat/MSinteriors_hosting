@@ -50,7 +50,7 @@ const Body = ({ selectedScroll }) => {
       });
   }, []);
 
-  const [Design, setDesign] = useState(null);
+  const [Design, setDesign] = useState("Bedroom");
   const [filteredArray, setfilteredArray] = useState(data);
 
   // navigate ***************

@@ -9,6 +9,9 @@
   font-family: "Poppins", sans-serif;
   background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
 }
+.pd-top{
+  margin-top: -2rem !important;
+}
 
 /* Inner container for form content */
 .form-inner-container {

@@ -26,50 +26,6 @@ const Navbar = ({ setScroll }) => {
   const handleNavItemClick = (path) => {
     navigate(path);
   };
-  // function skipToMain(data) {
-  //   // Store data in localStorage
-  //   localStorage.setItem("selectedItem", JSON.stringify(data));
-
-  //   // Function to set the scroll and attach data to the element
-  //   const setScroll = (data) => {
-  //     const ele = document.getElementById("scrollBar");
-
-  //     if (ele) {
-  //       // Attach data to the element
-  //       ele.setAttribute("data-scroll-data", JSON.stringify(data));
-
-  //       // Scroll to the element smoothly
-  //       ele.scrollIntoView({ behavior: "smooth" });
-  //       console.log("Scrolled to ele:", ele);
-  //     } else {
-  //       console.log("Element not found, navigating to root");
-  //       navigate("/");
-  //     }
-  //   };
-
-  // Attempt to set scroll with a delay to ensure the element is loaded
-  const attempts = 10; // Number of attempts
-  const delay = 100; // Delay between attempts in milliseconds
-
-  let currentAttempt = 0;
-
-  // const intervalId = setInterval(() => {
-  //   const ele = document.getElementById("scrollBar");
-
-  // if (ele) {
-  //   clearInterval(intervalId);
-  //   setScroll(data);
-  // } else if (currentAttempt >= attempts) {
-  //   clearInterval(intervalId);
-  //   console.log(
-  //     "Element not found after multiple attempts, navigating to root"
-  //   );
-  //   navigate("/");
-  // }
-
-  //     currentAttempt++;
-  //   }, delay);
-  // }
 
   return (
     <div>
@@ -79,7 +35,7 @@ const Navbar = ({ setScroll }) => {
         </div>
         <div className="nav-options hide-mob">
           <ul>
-            {!isAdmin && (
+            {!isLoggedIn && (
               <>
                 {/* <li
                   onClick={displayDropdown}
@@ -175,6 +131,10 @@ const Navbar = ({ setScroll }) => {
                   <CgProfile /> Dashboard
                 </div>
               )}
+              {/* <div className="profilePic">
+                <img src={User.picture} alt={User.name} />
+              </div> */}
+
               <div className="profile cart options hide-mob" onClick={logout}>
                 <CgProfile /> Logout
               </div>
@@ -186,12 +146,6 @@ const Navbar = ({ setScroll }) => {
                 onClick={() => handleNavItemClick("/login")}
               >
                 <CgProfile /> Sign In
-              </div>
-              <div
-                className="sign-up options hide-mob"
-                onClick={() => handleNavItemClick("/register")}
-              >
-                <CgProfile /> Sign Up
               </div>
             </>
           )}
@@ -208,7 +162,7 @@ const Navbar = ({ setScroll }) => {
           <RxCross1 />
         </button>
         <ul>
-          {!isAdmin && (
+          {!isLoggedIn && (
             <>
               <li className="sidebar-item">
                 <a href="#design-ideas">Design Ideas</a>
@@ -243,7 +197,7 @@ const Navbar = ({ setScroll }) => {
                   Dashboard
                 </li>
               )}
-              <li className="sidebar-item" onClick={logout}>
+              <li className="sidebar-item" onClick={() => logout}>
                 Logout
               </li>
             </>
@@ -254,12 +208,6 @@ const Navbar = ({ setScroll }) => {
                 onClick={() => handleNavItemClick("/login")}
               >
                 Sign In
-              </li>
-              <li
-                className="sidebar-item"
-                onClick={() => handleNavItemClick("/register")}
-              >
-                Sign Up
               </li>
             </>
           )}

@@ -5,7 +5,9 @@ import { loginUser } from "../Api/api";
 import "../styles/user.css";
 import { toast } from "react-toastify";
 import { useAuth } from "../Context/auth";
-
+import { FaGoogle } from "react-icons/fa";
+import { auth, provider } from "../GoogleAuth/config";
+import { signInWithPopup } from "firebase/auth";
 const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -22,6 +24,15 @@ const LoginForm = () => {
       ...formData,
       [name]: value,
     });
+  };
+  const signInWithGoogle = async () => {
+    await signInWithPopup(auth, provider)
+      .then((user) => {
+        console.log(user, "user");
+      })
+      .catch((e) => {
+        console.log("error in google sign in", e);
+      });
   };
 
   const handleSubmit = async (e) => {
@@ -96,6 +107,11 @@ const LoginForm = () => {
           </div>
           <button type="submit" className="submit-button">
             Login
+          </button>
+
+          <p className="pd-top">OR</p>
+          <button onClick={signInWithGoogle} className="submit-button pd-top">
+            Login with google {<FaGoogle />}
           </button>
         </form>
         <div className="register-link">
