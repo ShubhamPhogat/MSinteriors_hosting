@@ -13,12 +13,13 @@
 }
 .profilePic{
   border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   display: flex;
+  margin: 1rem;
 }
 .profilePic img{
   width: 100%;
@@ -50,8 +51,15 @@
 }
 
 .store {
-  grid-column: 4/5;
   display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.storeItem{
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -238,6 +246,9 @@
 @media(max-width:950px) {
   .hide-mob {
     display: none;
+  }
+  .main-nav{
+    grid-template-columns: 1rem 1fr 1fr 1rem;
   }
 }
 @media(min-width:950px) {

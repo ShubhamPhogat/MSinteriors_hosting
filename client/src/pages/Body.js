@@ -42,8 +42,6 @@ const Body = ({ selectedScroll }) => {
       .get("https://msinteriors-backend.onrender.com/api/images")
       .then((response) => {
         setData(response.data);
-
-        console.log("data fetched in body", response.data);
       })
       .catch((error) => {
         console.error("Error fetching data: ", error);
@@ -65,7 +63,6 @@ const Body = ({ selectedScroll }) => {
       const arrInd = 0;
       const url = `/imgView/${id}`;
       let items = filteredArray;
-      console.log("data to send via card", items);
       navigate(url, { state: { src, text, id, items, arrInd } });
     }
   }, [filteredArray]);

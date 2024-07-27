@@ -9,7 +9,6 @@ const ImageCard = ({ type }) => {
   const [error, setError] = useState(null);
   const [filteredArray, setFilteredArray] = useState([]);
 
-  console.log("image card type", type.item);
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -17,7 +16,6 @@ const ImageCard = ({ type }) => {
       .then((response) => {
         setData(response.data);
         setIsLoading(false);
-        console.log("data fetched", response.data);
         filterData(response.data, type);
       })
       .catch((error) => {
@@ -34,13 +32,11 @@ const ImageCard = ({ type }) => {
   }, [type, data]);
 
   const filterData = (data, type) => {
-    console.log("filtering on the type", type);
     if (type) {
       setFilteredArray(data.filter((item) => item.type === type.item));
     } else {
       setFilteredArray(data.filter((item) => item.type === "Bedroom"));
     }
-    console.log("filtered itme", filteredArray);
   };
 
   if (isLoading) return <p>Loading...</p>;

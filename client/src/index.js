@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { AuthProvider } from "./Context/auth";
+import { UserProvider } from "./Context/UserContext";
 
 // import videoBg from "./animations/videoBg.mp4";
 // import reportWebVitals from './reportWebVitals';
@@ -13,7 +14,9 @@ root.render(
   <BrowserRouter>
     <React.StrictMode>
       <AuthProvider>
-        <App />
+        <UserProvider>
+          <App />
+        </UserProvider>
       </AuthProvider>
     </React.StrictMode>
   </BrowserRouter>

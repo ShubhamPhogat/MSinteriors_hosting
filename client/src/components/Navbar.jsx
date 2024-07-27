@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../styles/navbar.css";
 import { TiShoppingCart } from "react-icons/ti";
 import { CgProfile } from "react-icons/cg";
@@ -7,14 +7,25 @@ import { useNavigate } from "react-router-dom";
 import { RxCross1 } from "react-icons/rx";
 import { HiOutlineBars4 } from "react-icons/hi2";
 import { useAuth } from "../Context/auth";
+import { UserContext } from "../Context/UserContext";
+import { auth } from "../GoogleAuth/config";
 
 const Navbar = ({ setScroll }) => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const { isLoggedIn, isAdmin, logout } = useAuth();
+  const { user } = useContext(UserContext);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  };
+  const logoutWithGoogle = async () => {
+    try {
+      await auth.signOut();
+      console.log("User signed out successfully");
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
   };
 
   // const displayDropdown = () => {
@@ -35,9 +46,7 @@ const Navbar = ({ setScroll }) => {
         </div>
         <div className="nav-options hide-mob">
           <ul>
-            {!isLoggedIn && (
-              <>
-                {/* <li
+            {/* <li
                   onClick={displayDropdown}
                   className="options hide-mob desIdea"
                 >
@@ -98,26 +107,24 @@ const Navbar = ({ setScroll }) => {
                     </ul>
                   </div>
                 </li> */}
-                <li
-                  onClick={() => handleNavItemClick("./EstimateCost/*")}
-                  className="options hide-mob"
-                >
-                  Free Estimate
-                </li>
-                <li
-                  onClick={() => handleNavItemClick("./kitchenGuide")}
-                  className="options hide-mob"
-                >
-                  guides
-                </li>
-                <li
-                  onClick={() => handleNavItemClick("/kitchenSizeCalc")}
-                  className="options"
-                >
-                  Kitchen Price calculator
-                </li>
-              </>
-            )}
+            <li
+              onClick={() => handleNavItemClick("./EstimateCost/*")}
+              className="options hide-mob"
+            >
+              Free Estimate
+            </li>
+            <li
+              onClick={() => handleNavItemClick("./kitchenGuide")}
+              className="options hide-mob"
+            >
+              guides
+            </li>
+            <li
+              onClick={() => handleNavItemClick("/kitchenSizeCalc")}
+              className="options"
+            >
+              Kitchen Price calculator
+            </li>
           </ul>
         </div>
         <div className="store">
@@ -137,6 +144,26 @@ const Navbar = ({ setScroll }) => {
 
               <div className="profile cart options hide-mob" onClick={logout}>
                 <CgProfile /> Logout
+              </div>
+            </>
+          ) : user ? (
+            <>
+              {user.uid === "AXAWnwNaiLcD9Pjri4yG20KD7B83" && (
+                <div
+                  className=" storeItem hide-mob"
+                  onClick={() => handleNavItemClick("/admin")}
+                >
+                  Dashboard
+                </div>
+              )}
+              <div className="profilePic storeItem">
+                <img src={user.photoURL} alt={user.displayName} />
+              </div>
+              <div
+                className="profile storeItem cart options hide-mob"
+                onClick={logoutWithGoogle}
+              >
+                Logout
               </div>
             </>
           ) : (
